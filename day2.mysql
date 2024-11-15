@@ -1,0 +1,99 @@
+(* Query all columns for a city in CITY with the ID 1661.
+The CITY table is described as follows: *)
+
+(* solution :  *)
+
+select * from CITY where ID = 1661 ; 
+
+(* output *)
+
+1661 Sayama JPN Saitama 162472
+---------------------------------------------------------------------------------------------------------
+
+(* Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+The CITY table is described as follows:
+ *)
+
+(*  SOLUTION *)
+
+SELECT * FROM CITY WHERE COUNTRYCODE = 'JPN';
+
+(* OUTPUT *)
+
+1613 Neyagawa JPN Osaka 257315
+1630 Ageo JPN Saitama 209442
+1661 Sayama JPN Saitama 162472
+1681 Omuta JPN Fukuoka 142889
+1739 Tokuyama JPN Yamaguchi 107078
+
+---------------------------------------------------------------------------------------------------------
+
+(* Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
+The CITY table is described as follows: *)
+
+(* SOLUTION *)
+
+SELECT NAME FROM CITY WHERE COUNTRYCODE = 'JPN';
+
+(* OUTPUT *)
+
+Neyagawa 
+Ageo 
+Sayama 
+Omuta 
+Tokuyama 
+---------------------------------------------------------------------------------------------------------
+(* 
+Query a list of CITY and STATE from the STATION table.
+The STATION table is described as follows:
+where LAT_N is the northern latitude and LONG_W is the western longitude. *)
+
+(* SOLUTION *)
+
+SELECT CITY , STATE FROM STATION;
+
+(* OUTPUT *)
+
+Acme LA 
+Addison MI 
+Agency MO 
+Aguanga CA 
+Alanson MI 
+Alba MI 
+Albany CA 
+Albion IN 
+Algonac MI 
+Aliso Viejo CA 
+Allerton IA 
+Alpine AR 
+Alton MO 
+Amazonia MO 
+Amo IN 
+Andersonville GA 
+Andover CT 
+Anthony KS 
+Archie MO 
+Arispe IA {-truncated-}
+
+---------------------------------------------------------------------------------------------------------
+(* Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+The STATION table is described as follows:
+where LAT_N is the northern latitude and LONG_W is the western longitude. *)
+
+(* SOLUTION  *)
+
+SELECT DISTINCT CITY FROM STATION WHERE ID % 2 = 0;
+
+(* OUTPUT *)
+
+Kissee Mills
+Loma Mar
+Tipton
+Glencoe
+Chignik Lagoon
+Albany
+Manchester
+Cahone
+Bowdon
+Watkins
+---------------------------------------------------------------------------------------------------------
