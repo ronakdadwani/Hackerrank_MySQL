@@ -17,3 +17,5 @@ Each day, I'll update my progress with the SQL problems I've tackled, along with
 You can follow my progress here or explore specific solutions if you're looking for similar SQL problems or need inspiration for your SQL practice.
 
 Stay tuned for daily updates as I work through new SQL challenges!
+
+https://www.mysql.com/
